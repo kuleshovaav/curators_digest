@@ -1,305 +1,304 @@
-!DOCTYPE html
-html lang=ru
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleДайджест ВЦ МИФИ — Начало учебного годаtitle
-    link href=httpsfonts.googleapis.comcss2family=Interwght@400;600;800&display=swap rel=stylesheet
-    style
-         Подключаем кастомный шрифт, если он установленимпортирован в системе 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дайджест ВЦ МИФИ — Начало учебного года</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Подключаем кастомный шрифт, если он установлен/импортирован в системе */
         @font-face {
-            font-family 'Handil Pro';
-            src local('Handil Pro');
-             Сюда можно добавить url('путь_к_шрифту.woff2') при необходимости 
+            font-family: 'Handil Pro';
+            src: local('Handil Pro');
         }
 
-        root {
-             Основные цвета ВЦ 
-            --primary #6403DC;
-            --accent #FFB151;
+        :root {
+            /* Основные цвета ВЦ */
+            --primary: #6403DC;
+            --accent: #FFB151;
             
-             Цвета Дня Донора 
-            --donor-primary #B9003B;
-            --donor-dark #640002;
+            /* Цвета Дня Донора */
+            --donor-primary: #B9003B;
+            --donor-dark: #640002;
             
-             Дополнительные цвета 
-            --extra-green #BBE829;
-            --extra-red #FE4A25;
-            --extra-pink #FE6FEA;
+            /* Дополнительные цвета */
+            --extra-green: #BBE829;
+            --extra-red: #FE4A25;
+            --extra-pink: #FE6FEA;
 
-             Базовые цвета 
-            --bg #f8f9fa;
-            --text #2d3436;
-            --white #ffffff;
-            --secondary-text #636e72;
+            /* Базовые цвета */
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --white: #ffffff;
+            --secondary-text: #636e72;
         }
 
         body {
-            font-family 'Handil Pro', 'Inter', sans-serif;
-            background-color var(--bg);
-            color var(--text);
-            line-height 1.6;
-            margin 0;
-            padding 20px;
-            display flex;
-            justify-content center;
+            font-family: 'Handil Pro', 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
         }
 
         .container {
-            max-width 650px;
-            width 100%;
-            background var(--white);
-            padding 40px;
-            border-radius 24px;
-            box-shadow 0 10px 30px rgba(100, 3, 220, 0.08);
-            box-sizing border-box;
+            max-width: 650px;
+            width: 100%;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(100, 3, 220, 0.08);
+            box-sizing: border-box;
         }
 
         header {
-            text-align center;
-            margin-bottom 30px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size 2rem;
-            margin 0;
-            letter-spacing -1px;
-            color var(--primary);
-            text-transform uppercase;
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: -1px;
+            color: var(--primary);
+            text-transform: uppercase;
         }
 
         .intro-card {
-            background #fcf9ff;
-            padding 25px;
-            border-radius 20px;
-            margin-bottom 30px;
-            border-left 5px solid var(--primary);
+            background: #fcf9ff;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
         }
 
         .intro-card p {
-            margin 0;
-            font-size 1.05rem;
-            color #444;
+            margin: 0;
+            font-size: 1.05rem;
+            color: #444;
         }
 
         .section-title {
-            display flex;
-            align-items center;
-            font-weight 800;
-            font-size 1.2rem;
-            text-transform uppercase;
-            letter-spacing 1px;
-            margin 40px 0 20px;
-            color var(--primary);
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 40px 0 20px;
+            color: var(--primary);
         }
 
         .event-list {
-            display grid;
-            gap 15px;
+            display: grid;
+            gap: 15px;
         }
 
         .event-card {
-            background #fff;
-            border 1px solid #edf2f7;
-            padding 20px;
-            border-radius 18px;
-            text-decoration none;
-            color inherit;
-            transition all 0.2s ease;
-            display block;
+            background: #fff;
+            border: 1px solid #edf2f7;
+            padding: 20px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: block;
         }
 
-        .event-cardhover {
-            transform translateY(-3px);
-            box-shadow 0 8px 20px rgba(100, 3, 220, 0.1);
-            border-color var(--primary);
+        .event-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(100, 3, 220, 0.1);
+            border-color: var(--primary);
         }
 
         .date-badge {
-            display inline-block;
-            background var(--primary);
-            color white;
-            padding 4px 12px;
-            border-radius 50px;
-            font-size 0.8rem;
-            font-weight 600;
-            margin-bottom 10px;
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
         .event-title {
-            font-weight 700;
-            font-size 1.1rem;
-            margin-bottom 8px;
-            display block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: block;
         }
 
         .event-desc {
-            font-size 0.95rem;
-            color var(--secondary-text);
-            margin 0;
+            font-size: 0.95rem;
+            color: var(--secondary-text);
+            margin: 0;
         }
 
-         Специальные стили для Дня Донора 
+        /* Специальные стили для Дня Донора */
         .event-card.donor-card {
-            border-color #f7e6eb;
+            border-color: #f7e6eb;
         }
         
-        .event-card.donor-cardhover {
-            border-color var(--donor-primary);
-            box-shadow 0 8px 20px rgba(185, 0, 59, 0.15);
+        .event-card.donor-card:hover {
+            border-color: var(--donor-primary);
+            box-shadow: 0 8px 20px rgba(185, 0, 59, 0.15);
         }
 
         .event-card.donor-card .date-badge {
-            background var(--donor-primary);
+            background: var(--donor-primary);
         }
 
         .donor-link {
-            color var(--donor-primary);
-            font-weight 600;
-            text-decoration none;
+            color: var(--donor-primary);
+            font-weight: 600;
+            text-decoration: none;
         }
 
-        .donor-linkhover {
-            text-decoration underline;
-            color var(--donor-dark);
+        .donor-link:hover {
+            text-decoration: underline;
+            color: var(--donor-dark);
         }
 
         .footer {
-            margin-top 50px;
-            text-align center;
-            border-top 1px solid #eee;
-            padding-top 30px;
+            margin-top: 50px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
         }
 
         .social-block {
-            margin-bottom 25px;
+            margin-bottom: 25px;
         }
 
         .social-block p {
-            font-weight 600;
-            margin-bottom 15px;
-            color var(--text);
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text);
         }
 
         .social-links {
-            display flex;
-            justify-content center;
-            flex-wrap wrap;
-            gap 12px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .btn {
-            padding 10px 20px;
-            border-radius 50px;
-            text-decoration none;
-            font-weight 600;
-            font-size 0.9rem;
-            transition 0.2s;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.2s;
         }
 
-         Кнопки ВЦ 
-        .btn-vc-tg { background #0088cc; color white; }
-        .btn-vc-vk { background #0077ff; color white; }
+        /* Кнопки ВЦ */
+        .btn-vc-tg { background: #0088cc; color: white; }
+        .btn-vc-vk { background: #0077ff; color: white; }
         
-         Кнопки Дня Донора 
-        .btn-donor { background var(--donor-primary); color white; border 1px solid var(--donor-primary); }
-        .btn-donorhover { background var(--donor-dark); }
+        /* Кнопки Дня Донора */
+        .btn-donor { background: var(--donor-primary); color: white; border: 1px solid var(--donor-primary); }
+        .btn-donor:hover { background: var(--donor-dark); }
 
-        .btnhover { opacity 0.85; transform scale(1.02); }
+        .btn:hover { opacity: 0.85; transform: scale(1.02); }
 
-        @media (max-width 480px) {
-            .container { padding 20px; }
-            h1 { font-size 1.5rem; }
+        @media (max-width: 480px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.5rem; }
         }
-    style
-head
-body
+    </style>
+</head>
+<body>
 
-div class=container
-    header
-        h1ВОЛОНТЁРСКИЙ ДАЙДЖЕСТ 🍁h1
-    header
+<div class="container">
+    <header>
+        <h1>ВОЛОНТЁРСКИЙ ДАЙДЖЕСТ 🍁</h1>
+    </header>
 
-    div class=intro-card
-        pПривет, студент! 👋brbr
-        Не знаешь, как ярко начать учебный год Волонтёрство — это способ увидеть МИФИ с другой стороны, познакомиться с новыми людьми и реально помочь. Выбирай мероприятие по душе и присоединяйся к нашей команде!p
-    div
+    <div class="intro-card">
+        <p>Привет, студент! 👋<br><br>
+        Не знаешь, как ярко начать учебный год? Волонтёрство — это способ увидеть МИФИ с другой стороны, познакомиться с новыми людьми и реально помочь. Выбирай мероприятие по душе и присоединяйся к нашей команде!</p>
+    </div>
 
-    div class=section-title✨ Выбирай своё мероприятиеdiv
+    <div class="section-title">✨ Выбирай своё мероприятие</div>
     
-    div class=event-list
+    <div class="event-list">
         
-        a href=httpsit.mephi.ruwebform3381 target=_blank class=event-card
-            span class=date-badge24–31 августаspan
-            span class=event-titleЗаселение первокурсниковspan
-            p class=event-descПомоги новым студентам комфортно заселиться в общежитие и сделать их первые шаги в МИФИ простыми и приятными.p
-        a
+        <a href="https://it.mephi.ru/webform/3381" target="_blank" class="event-card">
+            <span class="date-badge">24–31 августа</span>
+            <span class="event-title">Заселение первокурсников</span>
+            <p class="event-desc">Помоги новым студентам комфортно заселиться в общежитие и сделать их первые шаги в МИФИ простыми и приятными.</p>
+        </a>
 
-        a href=httpsit.mephi.ruwebform3403 target=_blank class=event-card
-            span class=date-badge31 августаspan
-            span class=event-titleПрофессорско-преподавательское собраниеspan
-            p class=event-descВстречай преподавателей и почётных гостей, помогай с навигацией и организацией важного предсентябрьского события.p
-        a
+        <a href="https://it.mephi.ru/webform/3403" target="_blank" class="event-card">
+            <span class="date-badge">31 августа</span>
+            <span class="event-title">Профессорско-преподавательское собрание</span>
+            <p class="event-desc">Встречай преподавателей и почётных гостей, помогай с навигацией и организацией важного предсентябрьского события.</p>
+        </a>
 
-        a href=httpsit.mephi.ruwebform3407 target=_blank class=event-card
-            span class=date-badge10 сентябряspan
-            span class=event-titleПознакомимся Открытая встреча ВЦ + After-partyspan
-            p class=event-descУзнай всё про добровольчество в МИФИ и найди друзей. Приходи круто провести время (кто не зарегистрировался — тот не ест пиццу 🍕)!p
-        a
+        <a href="https://it.mephi.ru/webform/3407" target="_blank" class="event-card">
+            <span class="date-badge">10 сентября</span>
+            <span class="event-title">Познакомимся? Открытая встреча ВЦ + After-party</span>
+            <p class="event-desc">Узнай всё про добровольчество в МИФИ и найди друзей. Приходи круто провести время (кто не зарегистрировался — тот не ест пиццу 🍕)!</p>
+        </a>
 
-        a href=httpsit.mephi.ruwebform3402 target=_blank class=event-card
-            span class=date-badge12 сентябряspan
-            span class=event-titleБлаготворительный забег от Н2Нspan
-            p class=event-descПоддержи бегунов на пути к цели — вместе собираем средства для детей в рамках фестиваля «От Сердца к Сердцу».p
-        a
+        <a href="https://it.mephi.ru/webform/3402" target="_blank" class="event-card">
+            <span class="date-badge">12 сентября</span>
+            <span class="event-title">Благотворительный забег от Н2Н</span>
+            <p class="event-desc">Поддержи бегунов на пути к цели — вместе собираем средства для детей в рамках фестиваля «От Сердца к Сердцу».</p>
+        </a>
 
-        a href=httpsit.mephi.ruwebform3410 target=_blank class=event-card donor-card
-            span class=date-badge18 сентябряspan
-            span class=event-title38-й День Донора (Центр им. Гаврилова)span
-            p class=event-descСтань волонтёром, чтобы заботиться о донорах! А если хочешь сдать кровь (1 донация спасает 3 жизни), регистрация доноров проходит в span class=donor-linkтг-канале Дня Донораspan.p
-        a
+        <a href="https://it.mephi.ru/webform/3410" target="_blank" class="event-card donor-card">
+            <span class="date-badge">18 сентября</span>
+            <span class="event-title">38-й День Донора (Центр им. Гаврилова)</span>
+            <p class="event-desc">Стань волонтёром, чтобы заботиться о донорах! А если хочешь сдать кровь (1 донация спасает 3 жизни), регистрация доноров проходит в <span class="donor-link">тг-канале Дня Донора</span>.</p>
+        </a>
 
-        a href=httpsit.mephi.ruwebform3401 target=_blank class=event-card
-            span class=date-badge27 сентябряspan
-            span class=event-titleФестиваль «От сердца к сердцу»span
-            p class=event-descСтань частью команды 15-го благотворительного фестиваля. Выбирай точку и помогай собирать средства детям. Создадим самое масштабное добро вместе!p
-        a
+        <a href="https://it.mephi.ru/webform/3401" target="_blank" class="event-card">
+            <span class="date-badge">27 сентября</span>
+            <span class="event-title">Фестиваль «От сердца к сердцу»</span>
+            <p class="event-desc">Стань частью команды 15-го благотворительного фестиваля. Выбирай точку и помогай собирать средства детям. Создадим самое масштабное добро вместе!</p>
+        </a>
 
-        a href=httpsit.mephi.ruwebform3412 target=_blank class=event-card
-            span class=date-badge27 сентябряspan
-            span class=event-titleМосковский марафонspan
-            p class=event-descПодари бегунам второе дыхание на водном пункте! Поддержи наших МИФИстов на дистанции и заряди их энергией.p
-        a
+        <a href="https://it.mephi.ru/webform/3412" target="_blank" class="event-card">
+            <span class="date-badge">27 сентября</span>
+            <span class="event-title">Московский марафон</span>
+            <p class="event-desc">Подари бегунам второе дыхание на водном пункте! Поддержи наших МИФИстов на дистанции и заряди их энергией.</p>
+        </a>
 
-        a href=httpsit.mephi.ruwebform3411 target=_blank class=event-card donor-card
-            span class=date-badge1 октябряspan
-            span class=event-title38-й День Донора (Центр крови ФМБА)span
-            p class=event-descЕщё один шанс помочь волонтёрам в организации. Хочешь сдать кровь Следи за регистрацией в span class=donor-linkтг-канале Дня Донораspan.p
-        a
+        <a href="https://it.mephi.ru/webform/3411" target="_blank" class="event-card donor-card">
+            <span class="date-badge">1 октября</span>
+            <span class="event-title">38-й День Донора (Центр крови ФМБА)</span>
+            <p class="event-desc">Ещё один шанс помочь волонтёрам в организации. Хочешь сдать кровь? Следи за регистрацией в <span class="donor-link">тг-канале Дня Донора</span>.</p>
+        </a>
 
-    div
+    </div>
 
-    div class=footer
+    <div class="footer">
         
-        div class=social-block
-            pПодписывайся на Волонтёрский Центрp
-            div class=social-links
-                a href=httpst.mevcmephi target=_blank class=btn btn-vc-tgTelegrama
-                a href=httpsvk.ruvcmephi target=_blank class=btn btn-vc-vkВКонтактеa
-            div
-        div
+        <div class="social-block">
+            <p>Подписывайся на Волонтёрский Центр:</p>
+            <div class="social-links">
+                <a href="https://t.me/vcmephi" target="_blank" class="btn btn-vc-tg">Telegram</a>
+                <a href="https://vk.ru/vcmephi" target="_blank" class="btn btn-vc-vk">ВКонтакте</a>
+            </div>
+        </div>
 
-        div class=social-block
-            pСледи за новостями Дня Донораp
-            div class=social-links
-                a href=httpst.medonordaymephi target=_blank class=btn btn-donorTelegram-каналa
-                a href=httpsvk.comdonordaymephi target=_blank class=btn btn-donorГруппа ВКa
-            div
-        div
+        <div class="social-block">
+            <p>Следи за новостями Дня Донора:</p>
+            <div class="social-links">
+                <a href="https://t.me/donordaymephi" target="_blank" class="btn btn-donor">Telegram-канал</a>
+                <a href="https://vk.com/donordaymephi" target="_blank" class="btn btn-donor">Группа ВК</a>
+            </div>
+        </div>
 
-        p style=color #b2bec3; font-size 0.8rem; margin-top 30px;#ДайджестВЦ #ВолонтерыМИФИp
-    div
-div
+        <p style="color: #b2bec3; font-size: 0.8rem; margin-top: 30px;">#ДайджестВЦ #ВолонтерыМИФИ</p>
+    </div>
+</div>
 
-body
-html
+</body>
+</html>
